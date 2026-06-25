@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Librarian — Statistiques du Défi No Magic</title>
+  <meta name="description" content="Statistiques complètes du défi Librarian: Tidy Up the Arcane Library — 3 072 livres en 2h04 sans magie." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero">
+    <canvas id="dust-canvas"></canvas>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Librarian · Tidy Up the Arcane Library</p>
+
+      <h1 class="hero-title">
+        3 072 Livres.<br>Sans Magie.
+      </h1>
+      <p class="hero-subtitle">Défi No Magic · Session complète &amp; Speedrun sub-3h</p>
+
+      <div class="victory-badge">
+        <span class="icon">🏆</span>
+        VICTOIRE — 2h04:43 · objectif battu de 55 minutes
+      </div>
+
+      <div class="hero-kpis">
+        <div class="kpi">
+          <span class="kpi-value green">3 072</span>
+          <span class="kpi-label">Livres rangés</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-value blue">400</span>
+          <span class="kpi-label">Étagères</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-value">2h04:43</span>
+          <span class="kpi-label">Temps Défi 2</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-value">−55 min</span>
+          <span class="kpi-label">Vs objectif 3h</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-value">38,92</span>
+          <span class="kpi-label">Pic l/min</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-value">9h52</span>
+          <span class="kpi-label">Session totale</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <span>Statistiques</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION GRAPHIQUES
+       ============================================================ -->
+  <main class="charts-section">
+
+    <!-- Séparateur ornement -->
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <span class="ornament-icon">📖</span>
+      <div class="ornament-line right"></div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-number">Analyse · Défi 2</span>
+      <h2 class="section-title">Progression du Speedrun</h2>
+      <p class="section-desc">
+        11 sprints pour remplir 3&nbsp;072 livres et 400 étagères en 2h04:43, sans recourir à aucun pouvoir magique.
+      </p>
+    </div>
+
+    <!-- Graphique principal Défi 2 -->
+    <div class="chart-card" style="margin-bottom: 1.5rem;">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-card-title">📚 Livres &amp; Étagères — Défi 2</div>
+          <div class="chart-card-sub">Progression cumulée sur 125 minutes · 11 sprints</div>
+        </div>
+      </div>
+
+      <div class="chart-stats">
+        <div class="cstat">
+          <span class="cstat-val">3 072</span>
+          <span class="cstat-lbl">Livres rangés</span>
+        </div>
+        <div class="cstat">
+          <span class="cstat-val blue">400</span>
+          <span class="cstat-lbl">Étagères complètes</span>
+        </div>
+        <div class="cstat">
+          <span class="cstat-val gold">125 min</span>
+          <span class="cstat-lbl">Durée totale</span>
+        </div>
+        <div class="cstat">
+          <span class="cstat-val">38,92</span>
+          <span class="cstat-lbl">Pic cadence l/min</span>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filters">
+          <button class="btn-filter green" id="d2-btn-livres">📚 Livres</button>
+          <button class="btn-filter blue"  id="d2-btn-etageres">🏠 Étagères</button>
+          <button class="btn-filter muted" id="d2-btn-tous">👁 Tous</button>
+        </div>
+        <button class="btn-export" id="d2-export">⬇ PNG</button>
+      </div>
+
+      <div class="chart-wrap" style="height: 320px;">
+        <canvas id="canvas-defi2" role="img" aria-label="Graphique Défi 2 : 3072 livres et 400 étagères en 125 minutes"></canvas>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#1d9e75;"></span>
+          Livres rangés (axe gauche)
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#3266ad;"></span>
+          Étagères (axe droit)
+        </div>
+        <div class="legend-item">
+          <span class="legend-dash" style="border-color: rgba(232,201,126,0.5);"></span>
+          Objectif 3 072
+        </div>
+      </div>
+    </div>
+
+    <!-- Séparateur -->
+    <div class="ornament" style="padding: 2rem 2rem 1.5rem;">
+      <div class="ornament-line"></div>
+      <span class="ornament-icon">✦</span>
+      <div class="ornament-line right"></div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-number">Analyse · Session complète</span>
+      <h2 class="section-title">Les 9h52 de la Session</h2>
+      <p class="section-desc">
+        Vue d'ensemble des 21 sprints sur la totalité de la session, incluant la correction finale.
+        Cadence moyenne : 5,28 livres/min sur les phases de rangement.
+      </p>
+    </div>
+
+    <!-- Graphique cumul session -->
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <div>
+          <div class="chart-card-title">📈 Progression cumulée — Session complète</div>
+          <div class="chart-card-sub">592 minutes de session · 21 sprints + 1 correction</div>
+        </div>
+        <button class="btn-export" id="cumul-export">⬇ PNG</button>
+      </div>
+
+      <div class="chart-stats">
+        <div class="cstat">
+          <span class="cstat-val">21</span>
+          <span class="cstat-lbl">Sprints totaux</span>
+        </div>
+        <div class="cstat">
+          <span class="cstat-val gold">592 min</span>
+          <span class="cstat-lbl">Durée session</span>
+        </div>
+        <div class="cstat">
+          <span class="cstat-val">5,28</span>
+          <span class="cstat-lbl">Moy. l/min</span>
+        </div>
+        <div class="cstat">
+          <span class="cstat-val green">100 %</span>
+          <span class="cstat-lbl">Complété</span>
+        </div>
+      </div>
+
+      <div class="chart-wrap" style="height: 300px;">
+        <canvas id="canvas-cumul" role="img" aria-label="Progression cumulée sur 592 minutes, 21 sprints, 3072 livres"></canvas>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#1d9e75;"></span>
+          Livres rangés cumulés
+        </div>
+        <div class="legend-item">
+          <span class="legend-dash" style="border-color: rgba(232,201,126,0.5);"></span>
+          Objectif 3 072
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       SECTION SPRINTS DU DÉFI 2
+       ============================================================ -->
+  <section class="timeline-section">
+
+    <div class="ornament" style="padding: 2rem 2rem 1.5rem;">
+      <div class="ornament-line"></div>
+      <span class="ornament-icon">⚡</span>
+      <div class="ornament-line right"></div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-number">Détail · Sprints Défi 2</span>
+      <h2 class="section-title">Les 11 Sprints du Speedrun</h2>
+      <p class="section-desc">
+        Cadence, volume et durée de chaque sprint. La barre indique la cadence relative au pic de 38,92 l/min.
+      </p>
+    </div>
+
+    <div class="sprints-grid" id="sprints-grid"></div>
+
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="footer-ornament">✦ &nbsp; Arcane Library &nbsp; ✦</div>
+    <div class="footer-game">Librarian: Tidy Up the Arcane Library — Mode No Magic</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chart-defi2.js"></script>
+  <script src="js/chart-cumul.js"></script>
+
+</body>
+</html>
